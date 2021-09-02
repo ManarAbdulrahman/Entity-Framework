@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Manars_Entity_Framework.Migrations
 {
-    public partial class init : Migration
+    public partial class update8 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -36,7 +36,7 @@ namespace Manars_Entity_Framework.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Student",
+                name: "Enrollmens",
                 columns: table => new
                 {
                     EnrollmentID = table.Column<int>(type: "int", nullable: false)
@@ -47,15 +47,15 @@ namespace Manars_Entity_Framework.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Student", x => x.EnrollmentID);
+                    table.PrimaryKey("PK_Enrollmens", x => x.EnrollmentID);
                     table.ForeignKey(
-                        name: "FK_Student_Courses_CourseID",
+                        name: "FK_Enrollmens_Courses_CourseID",
                         column: x => x.CourseID,
                         principalTable: "Courses",
                         principalColumn: "CourseID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Student_Students_StudentID",
+                        name: "FK_Enrollmens_Students_StudentID",
                         column: x => x.StudentID,
                         principalTable: "Students",
                         principalColumn: "ID",
@@ -63,20 +63,20 @@ namespace Manars_Entity_Framework.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Student_CourseID",
-                table: "Student",
+                name: "IX_Enrollmens_CourseID",
+                table: "Enrollmens",
                 column: "CourseID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Student_StudentID",
-                table: "Student",
+                name: "IX_Enrollmens_StudentID",
+                table: "Enrollmens",
                 column: "StudentID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Student");
+                name: "Enrollmens");
 
             migrationBuilder.DropTable(
                 name: "Courses");

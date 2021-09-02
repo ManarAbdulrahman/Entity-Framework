@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace Manars_Entity_Framework.Services
 {
+    //servicers has behaivors
     interface ICourseService
     {
     }

@@ -20,9 +20,9 @@ namespace Manars_Entity_Framework.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Enrollment>().ToTable("Enrollment");
+            //modelBuilder.Entity<Enrollment>().ToTable("Enrollment");
 
-            modelBuilder.Entity<Enrollment>().ToTable("Student");
+            //modelBuilder.Entity<Student>().ToTable("Student");
 
 
         }

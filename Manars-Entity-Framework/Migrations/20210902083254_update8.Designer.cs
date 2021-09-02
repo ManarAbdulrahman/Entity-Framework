@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Manars_Entity_Framework.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20210901120726_init")]
-    partial class init
+    [Migration("20210902083254_update8")]
+    partial class update8
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -59,7 +59,7 @@ namespace Manars_Entity_Framework.Migrations
 
                     b.HasIndex("StudentID");
 
-                    b.ToTable("Student");
+                    b.ToTable("Enrollmens");
                 });
 
             modelBuilder.Entity("Manars_Entity_Framework.Models.Student", b =>

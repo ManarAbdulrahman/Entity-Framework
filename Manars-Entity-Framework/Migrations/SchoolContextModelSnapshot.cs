@@ -57,7 +57,7 @@ namespace Manars_Entity_Framework.Migrations
 
                     b.HasIndex("StudentID");
 
-                    b.ToTable("Student");
+                    b.ToTable("Enrollmens");
                 });
 
             modelBuilder.Entity("Manars_Entity_Framework.Models.Student", b =>
